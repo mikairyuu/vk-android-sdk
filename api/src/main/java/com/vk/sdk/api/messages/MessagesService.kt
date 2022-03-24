@@ -494,6 +494,7 @@ class MessagesService {
             it.value
         }
         fieldsJsonConverted?.let { addParam("fields", it) }
+        fields?.let { addParam("extended", 1) }
         groupId?.let { addParam("group_id", it, min = 0) }
     }
 
