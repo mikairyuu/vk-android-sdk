@@ -841,7 +841,8 @@ class MessagesService {
         groupId: UserId? = null,
         lpVersion: Int? = null,
         lastN: Int? = null,
-        credentials: Boolean? = null
+        credentials: Boolean? = null,
+        extended: Boolean? = null,
     ): VKRequest<MessagesGetLongPollHistoryResponse> =
             NewApiRequest("messages.getLongPollHistory") {
         GsonHolder.gson.fromJson(it, MessagesGetLongPollHistoryResponse::class.java)
@@ -862,6 +863,7 @@ class MessagesService {
         lpVersion?.let { addParam("lp_version", it, min = 0) }
         lastN?.let { addParam("last_n", it, min = 0, max = 2000) }
         credentials?.let { addParam("credentials", it) }
+        extended?.let { addParam("extended", it) }
     }
 
     /**
