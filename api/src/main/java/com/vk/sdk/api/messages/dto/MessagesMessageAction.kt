@@ -43,7 +43,7 @@ import kotlin.String
  */
 data class MessagesMessageAction(
     @SerializedName("type")
-    val type: MessagesMessageActionStatus,
+    val type: String,
     @SerializedName("conversation_message_id")
     val conversationMessageId: Int? = null,
     @SerializedName("email")
