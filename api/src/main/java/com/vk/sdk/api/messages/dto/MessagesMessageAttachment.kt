@@ -60,7 +60,7 @@ import com.vk.sdk.api.wall.dto.WallWallComment
  */
 data class MessagesMessageAttachment(
     @SerializedName("type")
-    val type: MessagesMessageAttachmentType,
+    val type: String,
     @SerializedName("audio")
     val audio: AudioAudio? = null,
     @SerializedName("audio_message")
